@@ -55,5 +55,8 @@ extension ViewController {
 extension ViewController {
     @objc func anotherViewTapped(sender: UIButton) {
         coordinator?.pushToNavController(DifferentViewController())
+        if coordinator == nil {
+            print("nil")
+        }
     }
 }

@@ -28,7 +28,12 @@ class MainCoordinator: Coordinator {
     }
     
     func makeViewController() -> UIViewController {
-        ViewController()
+        let vc = ViewController()
+        return vc
+    }
+    
+    func makeDifCon() -> UIViewController {
+        DifferentViewController()
     }
     
     func pushToNavController(_ vc: UIViewController) {

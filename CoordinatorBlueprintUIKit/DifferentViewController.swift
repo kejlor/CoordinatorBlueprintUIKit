@@ -25,6 +25,7 @@ extension DifferentViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 20
+        stackView.backgroundColor = .blue
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Another"
