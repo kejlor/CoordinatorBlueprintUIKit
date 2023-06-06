@@ -10,9 +10,6 @@ import UIKit
 protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
-    
-    func startCoordinator()
-    func makeViewController() -> UIViewController
 }
 
 class MainCoordinator: Coordinator {
@@ -21,15 +18,6 @@ class MainCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-    }
-    
-    func startCoordinator() {
-        navigationController.setViewControllers([makeViewController()], animated: true)
-    }
-    
-    func makeViewController() -> UIViewController {
-        let vc = ViewController()
-        return vc
     }
     
     func makeDifCon() -> UIViewController {

@@ -13,15 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: MainCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
         let navController = UINavigationController()
-        let vc = ViewController()
-        
         coordinator = MainCoordinator(navigationController: navController)
-//        coordinator?.startCoordinator()
+        let vc = ViewController(coordinator: coordinator)
         vc.coordinator = coordinator
         coordinator?.pushToNavController(vc)
-//        MainCoordinator(navigationController: navController)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

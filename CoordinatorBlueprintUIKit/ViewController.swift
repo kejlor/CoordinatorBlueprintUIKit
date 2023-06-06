@@ -8,11 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     weak var coordinator: MainCoordinator?
     let stackView = UIStackView()
     let label = UILabel()
     let anotherViewButton = UIButton(type: .system)
+    
+    init(coordinator: MainCoordinator?) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
